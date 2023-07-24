@@ -1,16 +1,16 @@
-package ro.mobile.tests;
+package de.mobile.tests;
 
+import de.mobile.pages.BasePage;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import ro.mobile.pages.AdvancedSearchFormPage;
-
-import static ro.mobile.pages.BasePage.ADVANCEDFORM_URL;
+import de.mobile.pages.AdvancedSearchFormPage;
 
 public class AdvancedSearchFormTest extends BaseTest{
 
     @Test
 public void advancedFormTest(){
-        driver.get(ADVANCEDFORM_URL);
+        driver.get(BasePage.ADVANCEDFORM_URL);
+        waitForNumberOfSeconds(2);
 
         //Cookies Accept
         driver.findElement(By.xpath("//*[@id=\"mde-consent-modal-container\"]/div[2]/div[2]/div[1]/button")).click();
@@ -70,13 +70,14 @@ public void advancedFormTest(){
         advancedSearchFormPage.isofixAdd();
 
         advancedSearchFormPage.heatedSeatsAdd();
+        scroolDown300();
 
         advancedSearchFormPage.multiWheelAdd();
 
         advancedSearchFormPage.absAdd();
 
         advancedSearchFormPage.fogLightsAdd();
-        scroolDown300();
+        scroolDown500();
 
         advancedSearchFormPage.alloyWheelsAdd();
         waitForNumberOfSeconds(1);

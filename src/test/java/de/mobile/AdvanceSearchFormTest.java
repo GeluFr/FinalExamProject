@@ -1,4 +1,4 @@
-package ro.mobile;
+package de.mobile;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
