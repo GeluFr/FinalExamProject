@@ -5,11 +5,13 @@ import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 import de.mobile.pages.AdvancedSearchFormPage;
 
+import static de.mobile.pages.BasePage.ADVANCEDFORM_URL;
+
 public class AdvancedSearchFormTest extends BaseTest{
 
     @Test
 public void advancedFormTest(){
-        driver.get(BasePage.ADVANCEDFORM_URL);
+        driver.get(ADVANCEDFORM_URL);
         waitForNumberOfSeconds(2);
 
         //Cookies Accept
