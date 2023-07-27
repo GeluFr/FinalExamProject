@@ -22,7 +22,6 @@ public void advancedFormTest(){
 
         //Second-Hand car check
         advancedSearchFormPage.secondHandCarCheck();
-        waitForNumberOfSeconds(1);
 
         //Essential car details
         advancedSearchFormPage.carBrand();
