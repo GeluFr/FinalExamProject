@@ -29,19 +29,19 @@ public void advancedFormTest(){
 
         advancedSearchFormPage.carModel();
         waitForNumberOfSeconds(3);
-        scroolDown500();
+        scrollDown500();
 
         //Type of vehicle
         advancedSearchFormPage.vehicleType();
         waitForNumberOfSeconds(2);
-        scroolDown500();
+        scrollDown500();
 
         //Vehicle search
         advancedSearchFormPage.minimYear();
 
         advancedSearchFormPage.maximYear();
         waitForNumberOfSeconds(1);
-        scroolDown300();
+        scrollDown300();
 
         advancedSearchFormPage.minimPrice();
         waitForNumberOfSeconds(1);
@@ -53,36 +53,36 @@ public void advancedFormTest(){
 
         advancedSearchFormPage.selectColour();
         waitForNumberOfSeconds(1);
-        scroolDown300();
+        scrollDown300();
 
         //Engine
         advancedSearchFormPage.dieselFuel();
         waitForNumberOfSeconds(1);
-        scroolDown300();
+        scrollDown300();
 
         //Regional Search
         advancedSearchFormPage.countryButton();
 
         advancedSearchFormPage.selectCountry();
         waitForNumberOfSeconds(1);
-        scroolDown300();
+        scrollDown300();
 
         //Comfort and interior design
         advancedSearchFormPage.isofixAdd();
 
         advancedSearchFormPage.heatedSeatsAdd();
-        scroolDown300();
+        scrollDown300();
 
         advancedSearchFormPage.multiWheelAdd();
 
         advancedSearchFormPage.absAdd();
 
         advancedSearchFormPage.fogLightsAdd();
-        scroolDown500();
+        scrollDown500();
 
         advancedSearchFormPage.alloyWheelsAdd();
         waitForNumberOfSeconds(1);
-        scroolDown500();
+        scrollDown500();
 
         //Display result
         advancedSearchFormPage.displayResult();

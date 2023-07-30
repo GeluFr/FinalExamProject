@@ -31,12 +31,12 @@ public class BaseTest {
             throw new RuntimeException(e);
         }
     }
-    public void scroolDown500(){
+    public void scrollDown500(){
         new Actions(driver)
                 .scrollByAmount(0, 500)
                 .perform();
     }
-    public void scroolDown300(){
+    public void scrollDown300(){
         new Actions(driver)
                 .scrollByAmount(0, 300)
                 .perform();

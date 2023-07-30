@@ -31,7 +31,7 @@ public class LoginTest extends BaseTest{
 
         //Submit login
         loginPage.submitLogin();
-        waitForNumberOfSeconds(31);
+        waitForNumberOfSeconds(30);
 
         //Re-enter password
         loginPage.passwordInput("Madagascar8.");
