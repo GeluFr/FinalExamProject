@@ -1,11 +1,11 @@
 package de.mobile.tests;
 
 import de.mobile.pages.CarValuationFormPage;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
+
 
 import static de.mobile.pages.BasePage.CARVALUATION_URL;
 
@@ -44,7 +44,7 @@ public class CarValuationFormTest extends BaseTest{
 
         //Mileage Input
         carValuationFormPage.mileageInput();
-        waitForNumberOfSeconds(2);
+        waitForNumberOfSeconds(3);
 
         //Fuel select
         carValuationFormPage.dieselFuel();
@@ -115,17 +115,32 @@ public class CarValuationFormTest extends BaseTest{
 
         //Country market sell
         carValuationFormPage.countrySell();
-        waitForNumberOfSeconds(1);
+
+        new Actions(driver).sendKeys(Keys.TAB).perform();
+        new Actions(driver).sendKeys(Keys.TAB).perform();
+        waitForNumberOfSeconds(2);
 
         //Email input
-        WebElement element = driver.findElement(By.xpath("//*[@id=\"enter-email\"]"));
-        if (element.isDisplayed() && element.isEnabled()){
-            element.sendKeys("frateangelu@gmail.com");
-        }
-
-        //carValuationFormPage.EmailInput();
-
+        carValuationFormPage.EmailInput();
         waitForNumberOfSeconds(1);
+
+        //Submit
+        carValuationFormPage.submitButton();
+        waitForNumberOfSeconds(3);
+
+        //Login form
+        carValuationFormPage.userInput();
+        carValuationFormPage.passwordInput();
+        carValuationFormPage.submitLogin();
+        waitForNumberOfSeconds(27);
+        carValuationFormPage.passwordInput();
+        carValuationFormPage.submitLogin();
+        waitForNumberOfSeconds(7);
+
+        //Verify the result
+        carValuationFormPage.verifyResult();
+        waitForNumberOfSeconds(1);
+
 
 
 

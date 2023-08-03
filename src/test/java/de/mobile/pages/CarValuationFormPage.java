@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 
+
 public class CarValuationFormPage extends BasePage{
     public CarValuationFormPage(WebDriver driver) {
         super(driver);
@@ -159,6 +160,35 @@ public class CarValuationFormPage extends BasePage{
     @FindBy(xpath = "//input[@id='enter-email']") private WebElement enterEmail;
     public void EmailInput(){
         enterEmail.sendKeys("frateangelu@gmail.com");
+    }
+
+    //Submit button
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/div/section/div/div/div[2]/div/div[1]/div/button") private WebElement subBtn;
+    public void submitButton(){
+        subBtn.click();
+    }
+
+    //Login
+    //User
+    @FindBy(xpath = "//*[@id=\"login-username\"]") private WebElement userLog;
+    public void userInput(){
+        userLog.sendKeys("frateangelu@gmail.com");
+    }
+    //Password
+    @FindBy(xpath = "//*[@id=\"login-password\"]") private WebElement passLog;
+    public void passwordInput(){
+        passLog.sendKeys("Madagascar8.");
+    }
+    //Submit
+    @FindBy(xpath = "//*[@id=\"login-submit\"]") private WebElement submitLog;
+    public void submitLogin(){
+        submitLog.click();
+    }
+
+    //Verify the result
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[1]/article/section[2]/div/div[1]/div") private WebElement verRes;
+    public boolean verifyResult(){
+        return verRes.getText().contains("This is the average purchase price that customers received with a comparable model.");
     }
 
 }
