@@ -21,8 +21,18 @@ public class CarValuationFormTest extends BaseTest{
         //Accept cookies
         driver.findElement(By.xpath("//*[@id=\"mde-consent-modal-container\"]/div[2]/div[2]/div[1]/button")).click();
         waitForNumberOfSeconds(1);
+        scrollDown500();
 
         CarValuationFormPage carValuationFormPage = new CarValuationFormPage(driver);
+
+        //Change page language to english
+        carValuationFormPage.pageInEnglish();
+        new Actions(driver)
+                .scrollByAmount(500,0)
+                        .perform();
+        waitForNumberOfSeconds(1);
+
+
 
         //Brand select
         carValuationFormPage.carBrandSelect();

@@ -10,6 +10,13 @@ public class CarValuationFormPage extends BasePage{
         super(driver);
     }
 
+    //Select english lang
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[2]/footer/div/div/div/div[1]/div/div/select") private WebElement engSel;
+    public void pageInEnglish(){
+        Select engSel1 = new Select(engSel);
+        engSel1.selectByValue("en");
+    }
+
     //Car brand
     @FindBy(xpath = "//*[@id=\"select-make\"]") private WebElement brandSel;
     public void carBrandSelect(){
