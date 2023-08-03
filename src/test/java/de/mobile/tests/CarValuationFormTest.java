@@ -3,6 +3,7 @@ package de.mobile.tests;
 import de.mobile.pages.CarValuationFormPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
@@ -58,12 +59,44 @@ public class CarValuationFormTest extends BaseTest{
 
         //Equipment version
         carValuationFormPage.equipmentVersion();
+        waitForNumberOfSeconds(2);
+
+
+        //History
+        carValuationFormPage.previousOwners();
         waitForNumberOfSeconds(1);
-        scrollDown500();
+        carValuationFormPage.maintenanceInterval();
+        waitForNumberOfSeconds(2);
+
+        //Equipment
+        carValuationFormPage.multiSys();
+        waitForNumberOfSeconds(1);
+        carValuationFormPage.climateControl();
+        waitForNumberOfSeconds(1);
+        carValuationFormPage.acousticParkingAid();
+        waitForNumberOfSeconds(1);
+        carValuationFormPage.seatHeating();
+        waitForNumberOfSeconds(1);
+
+        //Exterior colour
+        carValuationFormPage.exteriorBlueColour();
+        waitForNumberOfSeconds(1);
+        carValuationFormPage.metallicColour();
+        waitForNumberOfSeconds(1);
+
+        //Condition
+        carValuationFormPage.bodyDamage();
+        waitForNumberOfSeconds(1);
+        carValuationFormPage.goodCondition();
+        waitForNumberOfSeconds(1);
+        carValuationFormPage.exteriorCondition();
+        waitForNumberOfSeconds(2);
+
+
 
         //Registered for road usage
         carValuationFormPage.roadRegistered();
-        waitForNumberOfSeconds(1);
+        waitForNumberOfSeconds(2);
 
         //Type of sell
         carValuationFormPage.typeOfSell();
@@ -82,8 +115,10 @@ public class CarValuationFormTest extends BaseTest{
         waitForNumberOfSeconds(1);
 
         //Email input
-        carValuationFormPage.EmailInput();
+        driver.findElement(By.xpath("//input[@id='enter-email']")).sendKeys("frateangelu@gmail.com");
+        //carValuationFormPage.EmailInput();
         waitForNumberOfSeconds(1);
+
 
 
 

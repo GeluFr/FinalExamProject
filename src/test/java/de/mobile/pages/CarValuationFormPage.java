@@ -69,14 +69,66 @@ public class CarValuationFormPage extends BasePage{
         equipSel.click();
     }
 
+    //History
+    @FindBy(xpath = "//*[@id=\"number-of-vehicle-owners-one\"]") private WebElement ownersel;
+    public void previousOwners(){
+        ownersel.click();
+    }
+    @FindBy(xpath = "//*[@id=\"maintenance-interval-no\"]") private WebElement mainteinCheck;
+    public void maintenanceInterval(){
+        mainteinCheck.click();
+    }
+
+    //Equipment
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[5]/div[2]/div[1]/div[2]/div/div/div/div[1]/label/div/div") private WebElement navSel;
+    public void multiSys(){
+        navSel.click();
+    }
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[5]/div[2]/div[1]/div[2]/div/div/div/div[2]/label/div/div") private WebElement acSel;
+    public void climateControl(){
+        acSel.click();
+    }
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[5]/div[2]/div[1]/div[2]/div/div/div/div[6]/label/div/div") private WebElement acParkSel;
+    public void acousticParkingAid(){
+        acParkSel.click();
+    }
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[5]/div[2]/div[1]/div[2]/div/div/div/div[9]/label/div/div") private WebElement shSel;
+    public void seatHeating(){
+        shSel.click();
+    }
+
+    //Exterior colour
+   @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[5]/div[3]/div/div/div/div/div/div/div/div[3]/label/div") private WebElement colourSel;
+    public void exteriorBlueColour(){
+        colourSel.click();
+    }
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[5]/div[4]/div/div/div/label/div[2]") private WebElement metalsel;
+    public void metallicColour(){
+        metalsel.click();
+    }
+
+    //Condition
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[6]/div[2]/div[1]/div/div/div[2]/div[2]/label") private WebElement bodyCond;
+    public void bodyDamage(){
+        bodyCond.click();
+    }
+    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[1]/div[3]/article[1]/div[1]/div[1]/section[2]/div[1]/div[1]/form[1]/div[6]/div[2]/div[2]/div[2]/div[1]/div[1]/div[1]/div[2]/label[1]") private WebElement genUsage;
+    public void goodCondition(){
+        genUsage.click();
+    }
+    @FindBy(xpath = "//body[1]/div[1]/div[1]/div[1]/div[1]/div[3]/article[1]/div[1]/div[1]/section[2]/div[1]/div[1]/form[1]/div[6]/div[2]/div[4]/div[1]/div[1]/div[1]/div[2]/label[1]") private WebElement extCond;
+    public void exteriorCondition(){
+        extCond.click();
+    }
+
     //Registered for road
-    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[4]/div[2]/div/div[1]/div/div/div[1]/label") private WebElement roadRed;
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[7]/div[2]/div/div[1]/div/div/div[1]/label") private WebElement roadRed;
     public void roadRegistered(){
         roadRed.click();
     }
 
     //Type of sell
-    @FindBy(xpath = "//*[@id=\"sellertype-fsbo\"]") private WebElement sellType;
+    @FindBy(xpath = "//*[@id=\"root\"]/div/div/div[1]/div[3]/article/div/div/section[2]/div/div/form/div[7]/div[2]/div/div[2]/div/div/div[1]/label") private WebElement sellType;
     public void typeOfSell(){
         sellType.click();
     }
@@ -101,7 +153,7 @@ public class CarValuationFormPage extends BasePage{
     }
 
     //Email input
-    @FindBy(xpath = "//*[@id=\"enter-email\"]") private WebElement enterEmail;
+    @FindBy(xpath = "//input[@id='enter-email']") private WebElement enterEmail;
     public void EmailInput(){
         enterEmail.sendKeys("frateangelu@gmail.com");
     }
