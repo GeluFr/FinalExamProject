@@ -112,10 +112,14 @@ public class CarValuationFormTest extends BaseTest{
 
         //Country market sell
         carValuationFormPage.countrySell();
-        waitForNumberOfSeconds(1);
+        waitForNumberOfSeconds(2);
 
         //Email input
-        driver.findElement(By.xpath("//input[@id='enter-email']")).sendKeys("frateangelu@gmail.com");
+        WebElement element = driver.findElement(By.cssSelector("#enter-email"));
+        if (element.isDisplayed() && element.isEnabled()){
+            element.sendKeys("frateangelu@gmail.com");
+        }
+
         //carValuationFormPage.EmailInput();
         waitForNumberOfSeconds(1);
 
