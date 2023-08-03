@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 import static de.mobile.pages.BasePage.CARVALUATION_URL;
 
+
 public class CarValuationFormTest extends BaseTest{
 
     @Test
@@ -21,16 +22,8 @@ public class CarValuationFormTest extends BaseTest{
         //Accept cookies
         driver.findElement(By.xpath("//*[@id=\"mde-consent-modal-container\"]/div[2]/div[2]/div[1]/button")).click();
         waitForNumberOfSeconds(1);
-        scrollDown500();
 
         CarValuationFormPage carValuationFormPage = new CarValuationFormPage(driver);
-
-        //Change page language to english
-        carValuationFormPage.pageInEnglish();
-        new Actions(driver)
-                .scrollByAmount(500,0)
-                        .perform();
-        waitForNumberOfSeconds(1);
 
 
 
@@ -122,15 +115,16 @@ public class CarValuationFormTest extends BaseTest{
 
         //Country market sell
         carValuationFormPage.countrySell();
-        waitForNumberOfSeconds(2);
+        waitForNumberOfSeconds(1);
 
         //Email input
-        WebElement element = driver.findElement(By.cssSelector("#enter-email"));
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"enter-email\"]"));
         if (element.isDisplayed() && element.isEnabled()){
             element.sendKeys("frateangelu@gmail.com");
         }
 
         //carValuationFormPage.EmailInput();
+
         waitForNumberOfSeconds(1);
 
 
