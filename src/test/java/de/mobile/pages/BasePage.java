@@ -7,6 +7,7 @@ public class BasePage {
     protected WebDriver driver;
     public   static String ADVANCEDFORM_URL = "https://www.mobile.de/ro/c%C4%83utare-detaliat%C4%83/nou/vhc:car/pg:dspcar";
     public static String SAVESEARCH_URL = "https://www.mobile.de/ro";
+
     public static String CARVALUATION_URL = "https://www.mobile.de/verkaufen/a/fahrzeug/start?i=priceestimation&lang=en";
     public static String LANGUAGE_URL = "https://www.mobile.de/ro";
     public static String CURRENCY_URL = "https://www.mobile.de/ro/automobil/dacia-spring/vhc:car,cnt:de!ro,ms1:6600_25_,frn:2021,prx:15000,ful:electricity,mlx:150000";
