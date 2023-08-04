@@ -14,9 +14,9 @@
         </classes>
     </test>
 
-    <test name="Saveing Searching Criteria" >
+    <test name="Saving Searching Criteria" >
         <classes>
-            <class name="de.mobile.tests.SaveingSearchingCriteriaTest" />
+            <class name="de.mobile.tests.SavingSearchingCriteriaTest" />
         </classes>
     </test>
 

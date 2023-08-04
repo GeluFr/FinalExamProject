@@ -1,12 +1,12 @@
 package de.mobile.tests;
 
-import de.mobile.pages.SaveingSearchingCriteriaPage;
+import de.mobile.pages.SavingSearchingCriteriaPage;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 import static de.mobile.pages.BasePage.SAVESEARCH_URL;
 
-public class SaveingSearchingCriteriaTest extends BaseTest{
+public class SavingSearchingCriteriaTest extends BaseTest{
 
     @Test
     public void searchingInputs(){
@@ -18,58 +18,58 @@ public class SaveingSearchingCriteriaTest extends BaseTest{
         //Cookies accept
         driver.findElement(By.xpath("//*[@id=\"mde-consent-modal-container\"]/div[2]/div[2]/div[1]/button")).click();
 
-        SaveingSearchingCriteriaPage saveingSearchingCriteriaPage = new SaveingSearchingCriteriaPage(driver);
+        SavingSearchingCriteriaPage savingSearchingCriteriaPage = new SavingSearchingCriteriaPage(driver);
 
         //car Brand
-        saveingSearchingCriteriaPage.brandDacia();
+        savingSearchingCriteriaPage.brandDacia();
         waitForNumberOfSeconds(1);
 
         //Car model
-        saveingSearchingCriteriaPage.modelSpring();
+        savingSearchingCriteriaPage.modelSpring();
         waitForNumberOfSeconds(1);
 
         //Maximum price
-        saveingSearchingCriteriaPage.maximPrice();
+        savingSearchingCriteriaPage.maximPrice();
         waitForNumberOfSeconds(1);
 
         //First registration
-        saveingSearchingCriteriaPage.firstRegistration();
+        savingSearchingCriteriaPage.firstRegistration();
         waitForNumberOfSeconds(1);
 
         //Maximum mileage
-        saveingSearchingCriteriaPage.maxMileage();
+        savingSearchingCriteriaPage.maxMileage();
         waitForNumberOfSeconds(1);
 
         //Fuel type
-        saveingSearchingCriteriaPage.fuelType();
+        savingSearchingCriteriaPage.fuelType();
         waitForNumberOfSeconds(1);
 
         //Country Import
-        saveingSearchingCriteriaPage.countryImport();
+        savingSearchingCriteriaPage.countryImport();
         waitForNumberOfSeconds(1);
 
         //Show results
-        saveingSearchingCriteriaPage.showResults();
+        savingSearchingCriteriaPage.showResults();
         waitForNumberOfSeconds(3);
 
 
         //Saveing this Search
-        saveingSearchingCriteriaPage.saveSearchButton();
+        savingSearchingCriteriaPage.saveSearchButton();
         waitForNumberOfSeconds(1);
 
-        saveingSearchingCriteriaPage.savedNameInput();
+        savingSearchingCriteriaPage.savedNameInput();
         waitForNumberOfSeconds(1);
 
-        saveingSearchingCriteriaPage.saveingNameCheck();
+        savingSearchingCriteriaPage.saveingNameCheck();
         waitForNumberOfSeconds(2);
 
         //My searching box
-        saveingSearchingCriteriaPage.mySaveings();
+        savingSearchingCriteriaPage.mySaveings();
         waitForNumberOfSeconds(3);
 
         //Verify if the search is saved
 
-        saveingSearchingCriteriaPage.saveIsComplete();
+        savingSearchingCriteriaPage.saveIsComplete();
 
     }
 
