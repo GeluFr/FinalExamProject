@@ -22,14 +22,18 @@ public void advancedFormTest(){
 
         //Second-Hand car check
         advancedSearchFormPage.secondHandCarCheck();
+        scrollDown300();
 
         //Essential car details
         advancedSearchFormPage.carBrand();
-        waitForNumberOfSeconds(1);
+        //waitForNumberOfSeconds(1);
 
         advancedSearchFormPage.carModel();
-        waitForNumberOfSeconds(3);
+        waitForNumberOfSeconds(1);
         scrollDown500();
+
+        //Close comercial
+        driver.findElement(By.xpath("/html/body/div[2]/div/span")).click();
 
         //Type of vehicle
         advancedSearchFormPage.vehicleType();
