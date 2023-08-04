@@ -26,14 +26,15 @@ public void advancedFormTest(){
 
         //Essential car details
         advancedSearchFormPage.carBrand();
-        //waitForNumberOfSeconds(1);
+        waitForNumberOfSeconds(1);
 
         advancedSearchFormPage.carModel();
-        waitForNumberOfSeconds(1);
+        waitForNumberOfSeconds(2);
         scrollDown500();
 
         //Close comercial
         driver.findElement(By.xpath("/html/body/div[2]/div/span")).click();
+
 
         //Type of vehicle
         advancedSearchFormPage.vehicleType();
@@ -52,6 +53,7 @@ public void advancedFormTest(){
 
         advancedSearchFormPage.maximPrice();
         waitForNumberOfSeconds(1);
+
 
         advancedSearchFormPage.colourButton();
 
