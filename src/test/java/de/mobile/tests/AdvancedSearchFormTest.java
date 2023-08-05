@@ -32,7 +32,7 @@ public void advancedFormTest(){
         waitForNumberOfSeconds(2);
         scrollDown500();
 
-        //Close comercial
+        //Close advertisement
         driver.findElement(By.xpath("/html/body/div[2]/div/span")).click();
 
 
